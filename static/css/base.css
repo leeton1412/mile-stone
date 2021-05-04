@@ -1,0 +1,9 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: calc(100vh - 164px);
+    background-color: black;
+    background-size: cover;
+}
