@@ -1,3 +1,9 @@
+
+
+/*----------- Google Fonts import --*/
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&family=Roboto&display=swap');
+
+/*----------- General styling --*/
 html {
     height: 100%;
 }
@@ -6,4 +12,22 @@ body {
     height: calc(100vh - 164px);
     background: url('/media/homepage_brownies.jpg') no-repeat center center fixed ;
     background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo-link {
+    font-family: 'New Tegomin', serif;
+    color: #aba69b;
+}
+
+.logo-font {
+    color: #aba69b;
+    font-family: 'New Tegomin', serif;
+}
+
+.shop-button{
+    color: #aba69b;
+    font-family: 'New Tegomin', serif;
+    background-color: #27272a !important;
+    opacity: 0.6;    
 }
