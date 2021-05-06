@@ -34,20 +34,20 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div class="row">
+        <div class="row md-nav header-container bg-dark">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-left text-sm-center">
                 <a href="{% url 'home' %}" class="navigation-link logo-link">
-                    <h2 class="is-hidden-mobile">CAKE-STATION</h2>
+                    <h2>CAKE-STATION</h2>
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-2 align-center">
                <form action="" method="GET">
                    <div class="input-group w-100">
-                        <input type="text" class="form-control border border-black rounded-0" name="q" placeholder="Search Products">
+                     <input type="text" class="form-control border border-black rounded-0" name="q" placeholder="Search Products">
                         <div class="input-group-append">
                             <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                 <span class="icon">
-                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-search"> Search </i>
                                 </span>
                             </button>
                         </div>
@@ -93,6 +93,13 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="row bg-dark w-100">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            </nav>
         </div>
     </header>
 {% if messages %}

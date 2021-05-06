@@ -327,3 +327,14 @@ input.submitbutton.ripplelink {
 	margin-left: 5px;
 	color: #ffffff;
 }
+
+/*------- Media Queries --- */
+
+@media (min-width: 992px) {
+.md-nav{
+
+}
+.header-container{
+
+}
+}
