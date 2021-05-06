@@ -40,6 +40,9 @@ body {
     opacity: 1;
 }
 
+.logo-font{
+    padding-top: 60px;
+}
 /* Main Footer */
 
 footer .main-footer {
