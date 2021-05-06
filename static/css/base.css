@@ -18,6 +18,7 @@ body {
 .logo-link {
     font-family: 'New Tegomin', serif;
     color: #aba69b;
+    width: fit-content;
 }
 
 .logo-font {
@@ -30,6 +31,13 @@ body {
     font-family: 'New Tegomin', serif;
     background-color: #27272a !important;
     opacity: 0.6;    
+}
+
+.shop-button:hover,
+.shop-button:active,
+.shop-button:focus {
+    background: #141024;
+    opacity: 1;
 }
 
 /* Main Footer */
