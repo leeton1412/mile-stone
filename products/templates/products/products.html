@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="container-fluid h-100 bg-primary">
+<div class="row">
+    <div class="col">
+    {% for product in products %}
+        {{ product.name }}
+    {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock %}
