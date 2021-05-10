@@ -18,8 +18,7 @@ class Category(models.Model):
 
 class Product(models.Model):
     """ Creating Products model """
-    category = models.ForeignKey('Category', null=True, blank=True, 
-    on_delete=models.SET_NULL)
+    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=False)
     name = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=2)
