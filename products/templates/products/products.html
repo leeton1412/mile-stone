@@ -7,11 +7,31 @@
 <div class="container-fluid h-100">
     <div class="row h-100">
         <div class="col-12 my-auto">
-        {% for product in products %}
-            {{ product.name }}
-            {{ product.image_url }}
-        {% endfor %}
+            <h2 class="logo-font text-center">All Products</h2>
         </div>
+        <div class="row col-md-10 col-s-12 mx-auto p-4">
+            {% for product in products %}
+                <div class="card h-100 col-s-12" style="width: 20rem;">
+                    {% if product.image %}
+                    <a href="">
+                        <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top img-fluid" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                    <div class="card-body">
+                        <div class="row">
+                            <p class="card-text text-center"><strong> {{ product.name }} </strong></p>
+                        </div>
+                        <div class="row">
+                            <p class="card-text">£{{ product.price }}</p>
+                        </div>
+                    </div>   
+                </div>
+            {% endfor %}
+        </div>    
     </div>
 </div>
 {% endblock %}

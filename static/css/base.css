@@ -12,6 +12,7 @@ body {
     height: calc(100vh - 164px);
     background: url('/media/homepage_brownies.jpg') no-repeat center center fixed ;
     background-size: cover;
+    z-index: 99999;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -42,6 +43,10 @@ body {
 
 .logo-font{
     padding-top: 60px;
+}
+
+.cover{
+    z-index: -1;
 }
 /* Main Footer */
 
