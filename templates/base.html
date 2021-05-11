@@ -32,10 +32,10 @@
 {% endblock %}
     <title>Cake-Station {% block titleextension %}{% endblock %}</title>
   </head>
-  <body>
-    <header class="container-fluid fixed-top p-b-10">
+<body>
+    <header class="container-fluid fixed-top pb-5">
         <div class="row md-nav header-container bg-dark w-100">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-left text-sm-center">
+            <div class="col-12 col-lg-4 my-1 py-1 py-lg-1 text-lg-left text-sm-center">
                 <a href="{% url 'home' %}" class="navigation-link logo-link">
                     <h2>CAKE-STATION</h2>
                 </a>
@@ -93,90 +93,92 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="row bg-dark w-100">
-            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    {% include 'includes/mobile-top-header.html' %}
-                    {% include 'includes/main-nav.html' %}
-            </nav>
+        
+                <div class="row bg-dark w-100">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        {% include 'includes/mobile-top-header.html' %}
+                        {% include 'includes/main-nav.html' %}
+                    </nav>
+                </div>
         </div>
     </header>
-{% if messages %}
-    <div class="messages">
+    {% if messages %}
+        <div class="messages">
 
+        </div>
+    {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Codepen Footer From Sherif Hamdy -->
+    <footer id="footer" class="footer-1">
+        <div class="main-footer widgets-dark typo-light">
+            <div class="container">
+            <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="widget subscribe no-box">
+                <h5 class="widget-title">CAKE-STATION<span></span></h5>
+                <p>A company dedicated to providing your gaming fuel! </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="widget no-box">
+                <h5 class="widget-title">Quick Links<span></span></h5>
+                <ul class="thumbnail-widget">
+                    <li>
+                        <div class="thumb-content"><a href="#.">&nbsp;Brownies</a></div>
+                    </li>
+                    <li>
+                        <div class="thumb-content"><a href="#.">&nbsp;Cakes</a></div>
+                    </li>
+                    <li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="widget no-box">
+                <h5 class="widget-title">Social Media<span></span></h5>
+                <a href="#"> <i class="fa fa-facebook"> </i> </a>
+                <a href="#"> <i class="fa fa-twitter"> </i> </a>
+                <a href="#"> <i class="fa fa-youtube"> </i> </a>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="widget no-box">
+                <h5 class="widget-title">Contact Us<span></span></h5>
+                <p>Need a Browine FAQ? Feel free to email us!</p>
+                <div class="emailfield">
+                    <input type="text" name="email" value="Email">
+                    <input name="uri" type="hidden" value="arabiantheme">
+                    <input name="loc" type="hidden" value="en_US">
+                    <input class="submitbutton ripplelink" type="submit" value="Subscribe">
+                    </form>  
+                </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                <p>Copyright Cake-Station © 2021. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
-{% endif %}
-
-{% block page_header %}
-{% endblock %}
-
-{% block content %}
-{% endblock %}
-
-<!-- Codepen Footer From Sherif Hamdy -->
-<footer id="footer" class="footer-1">
-   <div class="main-footer widgets-dark typo-light">
-   <div class="container">
-      <div class="row">
-         <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="widget subscribe no-box">
-               <h5 class="widget-title">CAKE-STATION<span></span></h5>
-               <p>A company dedicated to providing your gaming fuel! </p>
-            </div>
-         </div>
-         <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="widget no-box">
-               <h5 class="widget-title">Quick Links<span></span></h5>
-               <ul class="thumbnail-widget">
-                  <li>
-                     <div class="thumb-content"><a href="#.">&nbsp;Brownies</a></div>
-                  </li>
-                  <li>
-                     <div class="thumb-content"><a href="#.">&nbsp;Cakes</a></div>
-                  </li>
-                  <li>
-               </ul>
-            </div>
-         </div>
-         <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="widget no-box">
-               <h5 class="widget-title">Social Media<span></span></h5>
-               <a href="#"> <i class="fa fa-facebook"> </i> </a>
-               <a href="#"> <i class="fa fa-twitter"> </i> </a>
-               <a href="#"> <i class="fa fa-youtube"> </i> </a>
-            </div>
-         </div>
-         <br>
-         <br>
-         <div class="col-xs-12 col-sm-6 col-md-3">
-            <div class="widget no-box">
-               <h5 class="widget-title">Contact Us<span></span></h5>
-               <p>Need a Browine FAQ? Feel free to email us!</p>
-               <div class="emailfield">
-                  <input type="text" name="email" value="Email">
-                  <input name="uri" type="hidden" value="arabiantheme">
-                  <input name="loc" type="hidden" value="en_US">
-                  <input class="submitbutton ripplelink" type="submit" value="Subscribe">
-                  </form>  
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="footer-copyright">
-      <div class="container">
-         <div class="row">
-            <div class="col-md-12 text-center">
-               <p>Copyright Cake-Station © 2021. All rights reserved.</p>
-            </div>
-         </div>
-      </div>
-   </div>
-</footer>
+    </footer>
+</body>
 {% block postloadjs %}
 {% endblock %}
-  </body>
 </html>

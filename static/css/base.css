@@ -9,10 +9,9 @@ html {
 }
 
 body {
-    height: calc(100vh - 164px);
+    height: 100%;
     background: url('/media/homepage_brownies.jpg') no-repeat center center fixed ;
     background-size: cover;
-    z-index: 99999;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -205,7 +204,6 @@ footer.light .footer-copyright {
 
 .widget-title span::after {
 	background: inherit;
-	content: "";
 	height: inherit;
 	position: absolute;
 	top: -4px;

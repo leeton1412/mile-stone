@@ -1,17 +1,19 @@
 {% extends "base.html" %}
 {% load static %}
 
-
-
 {% block content %}
-<div class="container-fluid h-100">
-    <div class="row h-100">
-        <div class="col-12 my-auto">
-            <h2 class="logo-font text-center">All Products</h2>
+    <div class="container-fluid py-5">
+        <div class="row">
+            <div class="col">
+            <h2 class="logo-font text-center my-5">All Products</h2>
+            </div>
         </div>
-        <div class="row col-md-10 col-s-12 mx-auto p-4">
+    </div>
+<div class="container-fluid h-200 ">
+
+        <div class="row col-md-11 offset-md-1 col-sm-3 p-4">
             {% for product in products %}
-                <div class="card h-100 col-s-12" style="width: 20rem;">
+                <div class="card mx-auto" style="width: 14rem;">
                     {% if product.image %}
                     <a href="">
                         <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
@@ -30,6 +32,28 @@
                         </div>
                     </div>   
                 </div>
+
+                <div class="col-12 d-sm-none">
+                    <hr>
+                </div>
+
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none">
+                    <hr>
+                </div>
+                {% endif %}
+
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none">
+                    <hr>
+                </div>
+                {% endif %}
+
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block">
+                    <hr>
+                </div>
+                {% endif %}
             {% endfor %}
         </div>    
     </div>
