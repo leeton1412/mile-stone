@@ -2,9 +2,32 @@
 {% load static %}
 
 
-
 {% block content %}
-<div class="container-fluid h-100">
+
+<div class="container h-100 py-5"> 
+    <div class="row">
+        <div class="col-12 my-5">
+            <h2 class="logo-font text-center">Cake Basket</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3 class="logo-font text-center">Please make sure all items are correct before proceeding to checkout</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+                <div class="table-responsive"></div>
+            {% else %}
+                <h4 class="logo-font text-center">You Currently Have No Items In Your Bag</h4>
+                <hr>
+            <div class="row">
+                <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase mt-3">Get Some Cake!</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
 
 </div>
 {% endblock %}
