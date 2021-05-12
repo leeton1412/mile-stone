@@ -5,9 +5,8 @@
                 All Cakes
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products">
-                <a href="" class="dropdown-item">Price</a>
-                <a href="" class="dropdown-item">Vegan</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Goodies</a>
+                <a href="{% url 'products' %}?category=is_vegan" class="dropdown-item">Vegan</a>
+                <a href="{% url 'products' %}?category=brownies,is_vegan,cakes" class="dropdown-item">All Goodies</a>
             </div>
         </li>
 
@@ -16,9 +15,7 @@
                 Brownies
             </a>
             <div class="dropdown-menu" aria-labelledby="all-brownies">
-                <a href="" class="dropdown-item">Price</a>
-                <a href="" class="dropdown-item">Vegan</a>
-                <a href="" class="dropdown-item">All Brownies</a>
+                <a href="{% url 'products' %}?category=brownies,is_vegan " class="dropdown-item">All Brownies</a>
             </div>
         </li>
 
@@ -27,9 +24,7 @@
                 Cakes
             </a>
             <div class="dropdown-menu" aria-labelledby="all-cakes">
-                <a href="" class="dropdown-item">Price</a>
-                <a href="" class="dropdown-item">Vegan</a>
-                <a href="" class="dropdown-item">All Cakes</a>
+                <a href="{% url 'products' %}?category=cakes" class="dropdown-item">All Cakes</a>
             </div>
         </li>
     </ul>
