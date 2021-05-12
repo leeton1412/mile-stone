@@ -6,7 +6,9 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="all-products">
                 <a href="{% url 'products' %}?category=is_vegan" class="dropdown-item">Vegan</a>
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">Price</a>
                 <a href="{% url 'products' %}?category=brownies,is_vegan,cakes" class="dropdown-item">All Goodies</a>
+
             </div>
         </li>
 
