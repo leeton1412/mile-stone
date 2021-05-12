@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid py-5">
+        <div class="row">
+            <div class="col">
+            <h2 class="logo-font text-center my-5">All Products</h2>
+            </div>
+        </div>
+    </div>
+<div class="container-fluid h-200 ">
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-4">
+            <div class="image-holder my-5">
+                <div class="card mx-auto" style="width: 14rem;">
+                    {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank"> 
+                        <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top img-fluid" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}   
+            </div>
+        </div>
+        <div class="col-12 col-md-6 offset-md-1 col-lg-12">
+            <div class="row"></div>
+            <div class="details-container ">
+                <h4 class="product-text text-center">{{ product.name }} </h4>
+                <p>£{{ product.price }}</p>
+                {% if prouct.is_vegan %}
+                    <p class="product-text"><i class="fas fa-seedling"></i> Vegan Friendly! <i class="fas fa-seedling"></i></p>
+                {% endif %}
+                <p class="product-text">Allergens: {{ product.allergens }}</p>
+                <p class="product-text">This cake: {{ product.description }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

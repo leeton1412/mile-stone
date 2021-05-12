@@ -5,7 +5,7 @@
     <div class="container-fluid py-5">
         <div class="row">
             <div class="col">
-            <h2 class="logo-font text-center my-5">All Products</h2>
+            <h2 class="logo-font text-center my-5">Product Detail</h2>
             </div>
         </div>
     </div>
@@ -15,11 +15,11 @@
             {% for product in products %}
                 <div class="card mx-auto" style="width: 14rem;">
                     {% if product.image %}
-                    <a href="">
+                    <a href="{% url 'detail' product.id %}">
                         <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
                     </a>
                     {% else %}
-                    <a href="">
+                    <a href="{% url 'detail' product.id %}">
                         <img src="{{ MEDIA_URL }}noimage.png" class="card-img-top img-fluid" alt="{{ product.name }}">
                     </a>
                     {% endif %}
@@ -27,7 +27,7 @@
                         <div class="row">
                             <p class="card-text text-center"><strong> {{ product.name }} </strong></p>
                         </div>
-                        <div class="row">
+                        <div class="row text-center">
                             <p class="card-text">£{{ product.price }}</p>
                         </div>
                     </div>   

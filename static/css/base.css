@@ -47,6 +47,13 @@ body {
 .cover{
     z-index: -1;
 }
+
+.product-text{
+    font-family: 'New Tegomin', serif;
+    color: #aba69b;
+}
+
+/*--------------- Footer from Codepen ---- */ 
 /* Main Footer */
 
 footer .main-footer {
