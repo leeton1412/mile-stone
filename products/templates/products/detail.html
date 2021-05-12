@@ -5,7 +5,7 @@
     <div class="container-fluid py-5">
         <div class="row">
             <div class="col">
-            <h2 class="logo-font text-center my-5">All Products</h2>
+            <h2 class="logo-font text-center my-5">{{ product.name }}</h2>
             </div>
         </div>
     </div>
@@ -28,14 +28,32 @@
         <div class="col-12 col-md-6 offset-md-1 col-lg-12">
             <div class="row"></div>
             <div class="details-container ">
-                <h4 class="product-text text-center">{{ product.name }} </h4>
-                <p>£{{ product.price }}</p>
+                <p class="product-text">£{{ product.price }}</p>
                 {% if prouct.is_vegan %}
                     <p class="product-text"><i class="fas fa-seedling"></i> Vegan Friendly! <i class="fas fa-seedling"></i></p>
                 {% endif %}
                 <p class="product-text">Allergens: {{ product.allergens }}</p>
                 <p class="product-text">This cake: {{ product.description }}</p>
-            </div>
+
+                <form method="POST" action="" class="form">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12">
+                            <p>Amount:</p>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input class="form-control qty_input" type="number" min="1" name="amount" max="99" value="1" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase mt-3">Get Back To Shopping</a>
+                        </div>
+                        <input type="submit" class="shop-button btn btn-lg rounded-0 text-uppercase mt-3" value="Add to Bag">
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
