@@ -8,6 +8,7 @@ from .models import Product, Category
 
 def all_products(request):
     """Simple View to show all products"""
+    current_sort = None
     sort = None
     direction = None
     products = Product.objects.all()
