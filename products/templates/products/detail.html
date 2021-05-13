@@ -34,7 +34,7 @@
                 {% endif %}
                 <p class="product-text">Allergens: {{ product.allergens }}</p>
                 <p class="product-text">This cake: {{ product.description }}</p>
-
+<!-- Form to submit shopping basket-->
                 <form method="POST" action="" class="form">
                     {% csrf_token %}
                     <div class="form-row">
@@ -53,6 +53,7 @@
                         <input type="submit" class="shop-button btn btn-lg rounded-0 text-uppercase mt-3" value="Add to Bag">
                     </div>
                 </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
             </form>
         </div>
     </div>
