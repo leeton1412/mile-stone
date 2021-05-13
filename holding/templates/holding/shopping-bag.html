@@ -18,9 +18,42 @@
     <div class="row">
         <div class="col">
             {% if bag_items %}
-                <div class="table-responsive logo-font">
-                    {{ bag_items }}
-                </div>
+                <table class="logo-font-table">
+                <div class="table-responsive">
+                    <tr>
+                        <th scope="col-3"><h4>Name:</h4></th>
+                        <th scope="col-3"><h4>Price:</h4></th>
+                        <th scope="col-3"><h4>Total:</h4></th>
+                        <th scope="col-3"><h4>Description</h4></th>
+                    </tr>
+                    {% for item in bag_items %}
+                    <tbody>
+                        <td>
+                            <p class="logo-font"><bold>{{ item.product.name }}</bold></p>
+                        </td>
+                        <td>
+                            <p class="logo-font"><bold>£{{ item.product.price }}</bold></p>
+                        </td>
+                        <td>
+                            <p class="logo-font"><bold> {{ item.quantity }}</bold></p>
+                        </td>
+                        <td>
+                            <p class="logo-font"><bold>{{ item.product.description }}</bold></p>
+                        </td>
+                    </tbody>
+                    {% endfor %}
+                    <tr>
+                        <th scope="row">
+                        <h5 class="logo-font">Total: £{{ total|floatformat:2 }}</h5>
+                        </th>
+                        <td>
+                            <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase mt-5">Get Some Cake!</a>                            
+                        </td>
+                        <td>
+                            <a href="" class="shop-button btn btn-lg rounded-0 text-uppercase mt-5">Checkout</a>                            
+                        </td>
+                     </tr>
+                </table>  
             {% else %}
                 <h4 class="logo-font text-center">You Currently Have No Items In Your Bag</h4>
                 <hr>

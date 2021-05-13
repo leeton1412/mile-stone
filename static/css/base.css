@@ -24,6 +24,7 @@ body {
 .logo-font {
     color: #aba69b;
     font-family: 'New Tegomin', serif;
+    padding-top: 60px;
 }
 
 .shop-button{
@@ -40,10 +41,6 @@ body {
     opacity: 1;
 }
 
-.logo-font{
-    padding-top: 60px;
-}
-
 .cover{
     height: 100%;
     width: 100%;
@@ -58,6 +55,7 @@ body {
     font-family: 'New Tegomin', serif;
     color: #aba69b;
 }
+
 
 /*--------------- Footer from Codepen ---- */ 
 /* Main Footer */
