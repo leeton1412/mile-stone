@@ -35,7 +35,7 @@
                 <p class="product-text">Allergens: {{ product.allergens }}</p>
                 <p class="product-text">This cake: {{ product.description }}</p>
 <!-- Form to submit shopping basket-->
-                <form method="POST" action="" class="form">
+                <form method="POST" action="{% url 'add_item' product.id %}" class="form">
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
