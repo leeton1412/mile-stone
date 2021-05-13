@@ -1,0 +1,29 @@
+<!-- Script for Increment buttons -->
+<script type="text/javascript">
+
+    function disable(itemId){
+        var currentQuantity = parseInt($(`#id_qty_${itemId}`).val());
+        var minusDisable = currentQuantity < 2;
+        var plusDisable = currentQuantity > 99;
+        $(`#decrease-qty_${itemId}`).prop('disabled', minusDisable);
+        $(`#increase-qty_${itemId}`).prop('disabled', plusDisable);
+    }
+
+
+    $('.increase-quantity').click(function(e){
+        e.preventDefault();
+        var nearestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var currentValue = parseInt($(nearestInput).val());
+        $(nearestInput).val(currentValue + 1); 
+        var itemId = $(this).data('item_id');
+        disable(itemId);
+    });
+
+    $('.decrease-quantity').click(function(e){
+        e.preventDefault();
+        var nearestInput = $(this).closest('.input-group').find('.qty_input')[0];
+        var currentValue = parseInt($(nearestInput).val());
+        $(nearestInput).val(currentValue - 1);
+        disable(itemId); 
+    })
+</script>

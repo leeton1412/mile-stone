@@ -42,7 +42,25 @@
                             <p>Amount:</p>
                             <div class="form-group">
                                 <div class="input-group">
-                                    <input class="form-control qty_input" type="number" min="1" name="amount" max="99" value="1" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <div class="input-group-prepend">
+                                    <button class="decrease-quantity btn btn-lg rounded-0" data-item_id="{{ product.id }}" id="decrease-qty_{{ product.id }}">
+                                        <span class="icon">
+                                            <i class="fas fa-minus"></i>
+                                        </span>
+                                    </button>
+                                </div>
+
+                                    <input class="form-control qty_input" type="number" min="2" name="amount" max="99" value="1" data-item_id="{{ product.id }}" 
+                                    id="id_qty_{{ product.id }}">
+
+                                <div class="input-group-append">
+                                    <button class="increase-quantity btn btn-lg rounded-0" data-item_id="{{ product.id }}" id="increase-qty_{{ product.id }}">
+                                        <span class="icon">
+                                            <i class="fas fa-plus"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -59,4 +77,8 @@
     </div>
 </div>
 </div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity.html' %}
 {% endblock %}
