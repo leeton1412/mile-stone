@@ -10,7 +10,7 @@ def bag_view(request):
 def add_item(request, item_id):
     """ View to add items to bag """
 
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('amount'))
     redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
@@ -20,5 +20,4 @@ def add_item(request, item_id):
         bag[item_id] = quantity
 
     request.session['bag'] = bag
-    print(request.session['bag'])
     return redirect(redirect_url)
