@@ -5,14 +5,17 @@
 
 /*----------- General styling --*/
 html {
-    height: 100%;
+    min-height: 100%;
+    margin: 0;
 }
 
 body {
-    height: 100%;
+    min-height: 100%;
     background: url('/media/homepage_brownies.jpg') no-repeat center center fixed ;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    ba
 }
 
 .logo-link {
@@ -56,7 +59,16 @@ body {
     color: #aba69b;
 }
 
+.message-container{
+    position: fixed;
+    top: 200px;
+    right: 15px;
+    z-index: 9999999;
+}
 
+.custom-toast{
+    overflow: visible;
+}
 /*--------------- Footer from Codepen ---- */ 
 /* Main Footer */
 

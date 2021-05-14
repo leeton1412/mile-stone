@@ -108,7 +108,7 @@
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
-                {% include 'includes/toasts/success.html'}
+                {% include 'includes/toasts/success.html' %}
             {% endfor %}
         </div>
     {% endif %}
@@ -161,20 +161,20 @@
                     <input class="submitbutton ripplelink" type="submit" value="Subscribe">
                     </form>  
                 </div>
+            </div>
+            
+        </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                    <p>Copyright Cake-Station © 2021. All rights reserved.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-    <div class="footer-copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                <p>Copyright Cake-Station © 2021. All rights reserved.</p>
-                </div>
             </div>
         </div>
-        </div>
-    </div>
     </footer>
 </body>
 {% block postloadjs %}
