@@ -11,7 +11,7 @@ html {
 
 body {
     min-height: 100%;
-    background: url('/media/homepage_brownies.jpg') no-repeat center center fixed ;
+    background: url('/media/homepage_cake.jpg') no-repeat center center fixed ;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -34,7 +34,7 @@ body {
     color: #aba69b;
     font-family: 'New Tegomin', serif;
     background-color: #27272a !important;
-    opacity: 0.6;    
+    opacity: 0.9;    
 }
 
 .shop-button:hover,
@@ -68,6 +68,10 @@ body {
 
 .custom-toast{
     overflow: visible;
+}
+
+.home-logo{
+    opacity: 0.9;
 }
 /*--------------- Footer from Codepen ---- */ 
 /* Main Footer */

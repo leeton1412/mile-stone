@@ -4,16 +4,20 @@
 
 
 {% block content %}
-<div class="container-fluid h-100">
+<div class="container-fluid h-200">
     <div class="row h-100">
-        <div class="col-12 my-auto">
+        <div class="col-12 my-auto mt-5 pt-4">
             <h1 class="display-5 logo-font text-center">CAKE-STATION</h1>
         </div>
         <div>
-            <h4 class="text-center">
-                <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-            </h4>
+    
+            <div class="col-12 mt-5">
+                <img src="https://images.unsplash.com/photo-1513807762437-8c8dee6b3776?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=282&q=80" class="rounded float-middle offset-md-5 home-logo" alt="play_image">
+            </div>
         </div>
     </div>
+    <h4 class="text-center">
+                <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+            </h4>
 </div>
 {% endblock %}
