@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
 
@@ -21,16 +21,32 @@ def add_item(request, item_id):
     request.session['bag'] = bag
     return redirect(redirect_url)
 
+
 def update_item(request, item_id):
     """ View to update items in bag """
 
     quantity = int(request.POST.get('amount'))
     bag = request.session.get('bag', {})
 
-    if item_id in list(bag.keys()):
-        bag[item_id] += quantity
-    else:
+    if quantity > 0:
         bag[item_id] = quantity
+    else:
+        bag.pop[item_id]
 
     request.session['bag'] = bag
-    return redirect(redirect_url)
+    return redirect(reverse('bag_view'))
+
+
+def remove_item(request, item_id):
+    """ View to clear bag """
+    try:
+        bag = request.session.get('bag', {})
+
+        bag.pop[item_id]
+
+        request.session['bag'] = bag
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)
+        
