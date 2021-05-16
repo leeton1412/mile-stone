@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'checkout',
 
     # Crispy Forms
-    'crispy-forms',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -81,8 +81,8 @@ TEMPLATES = [
                 'holding.contexts.bag_contents',
             ],
             'builtins': [
-                'crispy_forms_templatetags.crispy_forms_tags',
-                'crispy_forms_templatetags.crispy_forms_field',
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
             ]
         },
     },
