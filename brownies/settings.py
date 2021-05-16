@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'products',
     'holding',
     'checkout',
+
+    # Crispy Forms
+    'crispy-forms',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +61,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'brownies.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -75,6 +80,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'holding.contexts.bag_contents',
             ],
+            'builtins': [
+                'crispy_forms_templatetags.crispy_forms_tags',
+                'crispy_forms_templatetags.crispy_forms_field',
+            ]
         },
     },
 ]

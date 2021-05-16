@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container h-100 py-5"> 
+    <div class="row">
+        <div class="col-12 my-5">
+            <h2 class="logo-font text-center">Cake Basket</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h3 class="logo-font text-center">Fill Out This Form To Proceed To Checkout</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+
+                </table>  
+            {% else %}
+                <h4 class="logo-font text-center">You Currently Have No Items In Your Bag</h4>
+                <hr>
+            <div class="row">
+                <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase mt-3">Get Some Cake!</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'products/includes/quantity.html' %}
+
+<script type="text/javascript">
+    // Quantity update 
+    $('.update-item').click(function(e) {
+        var quantity = $(this).prev('.updated-bag');
+        form.submit();
+    })
+
+    // Remove  
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/holding/remove/${itemId}/`;
+        var data = {'csrfmiddlewaretoken': csrfToken}
+
+        $.post(url, data)
+        .done(function(){
+            location.reload();
+        });
+    })
+</script>
+{% endblock %}
