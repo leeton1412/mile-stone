@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-12">
             <div class="row">
-                {% for item in bag_items %}
+                {% for item in bag_tools %}
                 <div class="col-12">
                     <h3>{{ item.product.name }}</h3>
                     {% if item.product.image %}
@@ -32,6 +32,7 @@
                         <img src="{{ MEDIA_URL }}noimage.png }}" alt="{{ product.name }}">
                     {% endif %}
                 </div>
+                {% endfor %} 
             </div>
         </div>
     <div class="row">
@@ -45,22 +46,22 @@
         </div>
     </div>
         <div class="col-md-12">
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+            <form action="{% url 'checkout' %}" method="" id="payment-form">
                 {% csrf_token %}
                 <fieldset>
                     <legend>Details</legend>
-                    {{ order.form.full_name | as_crispy_field}}
-                    {{ order.form.email | as_crispy_field}}
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
                 </fieldset>
                 <fieldset>
                     <legend>Delivery Details</legend>
-                    {{ order.form.country | as_crispy_field}}
-                    {{ order.form.postcode | as_crispy_field}}
-                    {{ order.form.town_or_city | as_crispy_field}}
-                    {{ order.form.street_address1 | as_crispy_field}}
-                    {{ order.form.street_address2 | as_crispy_field}}
-                    {{ order.form.county | as_crispy_field}}
-                    {{ order.form.phone_number | as_crispy_field}} 
+                    {{ order_form.country | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    {{ order_form.town_or_city | as_crispy_field }}
+                    {{ order_form.street_address1 | as_crispy_field }}
+                    {{ order_form.street_address2 | as_crispy_field }}
+                    {{ order_form.county | as_crispy_field}}
+                    {{ order_form.phone_number | as_crispy_field}} 
                     <div class="form-check form-check-inline">
                         {% if user.is_authenticated %}
                             <label class="form-check-label" for="save-information"> Save This Information?</label>
@@ -71,7 +72,8 @@
                                 <a href="{% url 'account_login' %}">Login</a>
                             </label>
                         {% endif %}    
-                    </div>                   
+                    </div> 
+                 
                 </fieldset>
                 <fieldset>
                     <!-- Stripe Payment-->
@@ -84,7 +86,7 @@
                         </div>     
                 </fieldset>
                 <div class="submit">
-                    <a href="{% url for 'bag_view' %}">
+                    <a href="{% url 'bag_view' %}"></a>
                         <p>Change Bag</p>
                     </a>
                     <button id="submit-button">

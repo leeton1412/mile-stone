@@ -3,9 +3,11 @@ from django.contrib import messages
 from products.models import Product
 # Create your views here.
 
+
 def bag_view(request):
     """Simple View to render page"""
     return render(request, "holding/shopping-bag.html")
+
 
 def add_item(request, item_id):
     """ View to add items to bag """
