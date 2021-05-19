@@ -19,11 +19,14 @@ body {
 }
 
 .logo-link {
-    font-family: 'New Tegomin', serif;
-    color: #aba69b;
-    width: fit-content;
+    font-family:'New Tegomin', serif;
+    color:#aba69b;
+    width:fit-content;
 }
 
+#card-errors{
+    background: white;
+}
 .logo-font {
     color: #aba69b;
     font-family: 'New Tegomin', serif;

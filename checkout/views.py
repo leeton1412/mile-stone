@@ -11,10 +11,12 @@ import stripe
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    print(f"PUBLIC KEY: {stripe_public_key}")
+    print(f"SECRET KEY: {stripe_secret_key}")
 
     bag = request.session.get('bag', {})
     if not bag:
-        messages.error(request, "There's nothing in your bag at the moment")
+        messages.error(request, "There's nothing to munch on yet")
         return redirect(reverse('products'))
 
     current_bag = bag_contents(request)
