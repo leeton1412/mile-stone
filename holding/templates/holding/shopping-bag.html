@@ -98,24 +98,24 @@
 {{ block.super }}
 {% include 'products/includes/quantity.html' %}
 
-<script type="text/javascript">
-    // Quantity update 
-    $('.update-item').click(function(e) {
-        var quantity = $(this).prev('.updated-bag');
-        form.submit();
-    })
+    <script type="text/javascript">
+        // Quantity update 
+        $('.update-item').click(function(e) {
+            var quantity = $(this).prev('.updated-bag');
+            form.submit();
+        })
 
-    // Remove  
-    $('.remove-item').click(function(e) {
-        var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/holding/remove/${itemId}/`;
-        var data = {'csrfmiddlewaretoken': csrfToken}
+        // Remove  
+        $('.remove-item').click(function(e) {
+            var csrfToken = "{{ csrf_token }}";
+            var itemId = $(this).attr('id').split('remove_')[1];
+            var url = `/holding/remove/${itemId}/`;
+            var data = {'csrfmiddlewaretoken': csrfToken}
 
-        $.post(url, data)
-        .done(function(){
-            location.reload();
-        });
-    })
-</script>
+            $.post(url, data)
+            .done(function(){
+                location.reload();
+            });
+        })
+    </script>
 {% endblock %}

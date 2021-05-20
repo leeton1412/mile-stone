@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse, get_list_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.conf import settings
 
@@ -20,13 +20,13 @@ def checkout(request):
         form_data = {
             'full_name': request.POST['full_name'],
             'email': request.POST['email'],
-            'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
             'town_or_city': request.POST['town_or_city'],
             'street_address1': request.POST['street_address1'],
             'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
+            'phone_number': request.POST['phone_number'],
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
@@ -40,9 +40,10 @@ def checkout(request):
                             product=product,
                             quantity=item_data,
                         )
+                        order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
+                        "One of the products in your bag wasn't found in our database."
                         "Please call us for assistance!")
                     )
                     order.delete()
@@ -101,5 +102,5 @@ def checkout_success(request, order_number):
     context = {
         'order': order,
     }
-
+    print(order)
     return render(request, template, context)

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="container h-100 py-5"> 
+    <div class="row">
+        <div class="col-12 my-5">
+            <h2 class="logo-font text-center">THANK YOU FOR YOUR PURCHASE</h2>
+            <p>PLEASE FIND DETAILS OF YOUR PURCHASE BELLOW</p>
+        </div>
+            
+    </div>
+    <div class="row"></div>
+</div>
+{% endblock %}
