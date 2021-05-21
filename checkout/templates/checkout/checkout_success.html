@@ -16,6 +16,166 @@
         </div>
             
     </div>
-    <div class="row"></div>
+    <div class="row">
+        <div class="col-12">
+        <!-- Order Information-->
+            <div class="order">
+                <div class="row">
+                    <div class="col">
+                        <p class="logo-font">Order Information</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Order Number:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>{{ order.order_number }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Date of Order:</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12">
+                        <p>{{ order.date }}</p>
+                    </div>
+                </div>
+            </div>
+        <!--Order Details-->
+        <div class="col-12">
+            <div class="order">
+                <div class="row">
+                    <div class="col">
+                        <p class="logo-font">Order Details</p>
+                    </div>
+                </div>
+                <div class="row">
+                {% for item in order.lineitems.all %}
+                    <div class="col-12">
+                        <p>Product:</p>
+                    </div>
+                </div>
+                    <div class="col-12">
+                        <p>{{ item.product.name }}</p>
+                    </div>
+                </div>
+                    <div class="col-12">
+                        <p>Quantity:</p>
+                    </div>
+                </div>
+                    <div class="col-12">
+                        <p>{{ item.quantity }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+                
+        <!--Delivery Details-->
+        <div class="col-12">
+            <div class="order">
+                <div class="row">
+                    <div class="col">
+                        <p class="logo-font">Delivery Address</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Name:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>{{ order.full_name }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Street Address 1:</p>
+                    </div>
+                    <div class="col-12">
+                        <p>{{ order.street_address1 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Street Address 2:</p>
+                    </div>
+                    <div class="col-12">
+                        <p>{{ order.street_address2 }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Post Code:</p>
+                    </div>
+                    <div class="col-12">
+                        <p>{{ order.postcode }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>City or Town:</p>
+                    </div>
+                    <div class="col-12">
+                        <p>{{ order.town_or_city }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>County:</p>
+                    </div>
+                    <div class="col-12">
+                        <p>{{ order.county }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Country:</p>
+                    </div>
+                    <div class="col-12">
+                        <p>{{ order.country }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>Contact Number:</p>
+                    </div>
+                    <div class="col-12">
+                        <p>{{ order.phone_number }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="order">
+                <div class="row">
+                    <div class="col">
+                        <p class="logo-font">Billing Information</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>{{ order.name }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>{{ order.name }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <p>{{ order.name }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
