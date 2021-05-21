@@ -102,6 +102,7 @@
                         <p>{{ order.street_address1 }}</p>
                     </div>
                 </div>
+                {% if order.street_address2 %}
                 <div class="row">
                     <div class="col-12">
                         <p>Street Address 2:</p>
@@ -110,6 +111,7 @@
                         <p>{{ order.street_address2 }}</p>
                     </div>
                 </div>
+                {% endif %}
                 <div class="row">
                     <div class="col-12">
                         <p>Post Code:</p>
@@ -126,6 +128,7 @@
                         <p>{{ order.town_or_city }}</p>
                     </div>
                 </div>
+                {% if order.county %}
                 <div class="row">
                     <div class="col-12">
                         <p>County:</p>
@@ -134,6 +137,7 @@
                         <p>{{ order.county }}</p>
                     </div>
                 </div>
+                {% endif %}
                 <div class="row">
                     <div class="col-12">
                         <p>Country:</p>
@@ -152,6 +156,7 @@
                 </div>
             </div>
         </div>
+        <!--Billing Information-->
         <div class="col-12">
             <div class="order">
                 <div class="row">
