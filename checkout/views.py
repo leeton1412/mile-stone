@@ -20,7 +20,7 @@ def cache_checkout_data(request):
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'username': request.user,
-            'save_information': request.POST.get('save-information'),
+            'save_info': request.POST.get('saveInfo'),
             'bag': json.dumps(request.session.get('bag', {})),
         })
         return HttpResponse(status=200)
@@ -72,7 +72,7 @@ def checkout(request):
                     order.delete()
                     return redirect(reverse('view_bag'))
 
-            request.session['save_info'] = 'save-info' in request.POST
+            request.session['save_info'] = 'save-information' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
             messages.error(request, 'There was an error with your form. \
