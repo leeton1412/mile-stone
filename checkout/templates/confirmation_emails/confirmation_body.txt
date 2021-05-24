@@ -1,0 +1,7 @@
+Hi {{ order.full_name }}
+
+Thank you for your purchase! We hope you enjoy!
+Please feel free to subscribe to get access
+to our exclusive Brownies!
+
+Cake-Station
