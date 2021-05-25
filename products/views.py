@@ -84,3 +84,28 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+
+def edit_product(request, product_id):
+    """ Edit Product """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Cake Updated!')
+            return redirect(reverse('detail', args=[product.id]))
+        else:
+            messages.success(request, 'Woops, something went wrong')
+    else:
+        form = ProductForm(instance=product)
+
+        template = 'products/edit_product.html'
+        context = {
+            'form': form,
+            'product': product,
+        }
+
+        return render(request, template, context)
+
+
