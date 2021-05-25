@@ -39,7 +39,7 @@
                     {% csrf_token %}
                     <div class="form-row">
                         <div class="col-12">
-                            <p>Amount:</p>
+                            <p class="logo-font">Amount:</p>
                             <div class="form-group">
                                 <div class="input-group">
                                 <div class="input-group-prepend">
@@ -66,9 +66,20 @@
                         </div>
 
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase mt-3">Get Back To Shopping</a>
+                            <a href="{% url 'products' %}" class="shop-button btn btn-sm rounded-0 text-uppercase mt-3 mb-3">Get Back To Shopping</a>
+                            <input type="submit" class="shop-button btn btn-sm rounded-0 text-uppercase mt-3 mb-3" value="Add to Bag">
                         </div>
-                        <input type="submit" class="shop-button btn btn-lg rounded-0 text-uppercase mt-3" value="Add to Bag">
+                        <div class="row">
+                            <div class="col-12">
+                                {% if request.user.is_superuser %}
+                                    <small>
+                                        <a href="{% url 'edit_product' product.id %}" class="logo-font">Edit </a>
+                                        <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                                    </small>
+                                {% endif %}                                  
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">

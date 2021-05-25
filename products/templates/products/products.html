@@ -11,7 +11,7 @@
     </div>
 <div class="container-fluid">
 
-        <div class="row col-md-11 offset-md-1 col-sm-3 p-4">
+        <div class="row col-md-11 offset-md-1 col-sm-3 p-4 logo-font">
             {% for product in products %}
                 <div class="card mx-auto bg-dark" style="width: 14rem;">
                     {% if product.image %}
@@ -30,7 +30,13 @@
                         <div class="row text-center">
                             <p class="card-text">£{{ product.price }}</p>
                         </div>
-                    </div>   
+                    </div>
+                    {% if request.user.is_superuser %}
+                        <small>
+                            <a href="{% url 'edit_product' product.id %}" class="logo-font">Edit </a>
+                            <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                        </small>
+                    {% endif %}   
                 </div>
 
                 <div class="col-12 d-sm-none">
