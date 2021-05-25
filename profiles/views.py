@@ -3,9 +3,11 @@ from django.contrib import messages
 from .models import UserProfile
 from checkout.models import Order
 from .forms import UserProfileForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 
+@login_required
 def profiles(request):
     """Simple View to render page and display profile"""
     profile = get_object_or_404(UserProfile, user=request.user)
