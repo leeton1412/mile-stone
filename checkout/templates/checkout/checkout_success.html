@@ -187,3 +187,9 @@
     {% endif %}
 </div>
 {% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+<script>
+    console.log(save_info)
+</script>
+{% endblock %}

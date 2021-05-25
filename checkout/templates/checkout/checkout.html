@@ -67,10 +67,8 @@
                             <label class="form-check-label" for="save-information"> Save This Information?</label>
                             <input type="checkbox" class="form-check-input" id="save-information" name="save-details" checked>
                         {% else %}
-                            <label for="save-information" class="form-check-label">
-                                <a href="{% url 'account_signup' %}">Register an account?</a>
-                                <a href="{% url 'account_login' %}">Login</a>
-                            </label>
+                            <a href="{% url 'account_signup' %}">Register an account?</a>
+                            <a href="{% url 'account_login' %}">Login</a>
                         {% endif %}    
                     </div> 
                  

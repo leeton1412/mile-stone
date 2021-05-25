@@ -50,12 +50,13 @@ form.addEventListener('submit', function(ev) {
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
 
-    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+    var save_info = Boolean($('#save-information').attr('checked'));
+    console.log(save_info);
     var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
     var postData = {
         'csrfmiddlewaretoken': csrfToken,
         'client_secret': client_secret,
-        'save-information': saveInfo,
+        'save_info': save_info,
     };
     var url = '/checkout/cache_checkout_data/';
 

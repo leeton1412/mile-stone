@@ -1,8 +1,8 @@
 <li class="list-inline-item">
     <a href="#" class="navigation-link d-block d-lg-none" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
-            <div class="fas fa-search"></div>
-            <p class="my-0">Search</p>
+            <div class="fas fa-search logo-font"></div>
+            <p class="my-0 logo-font">Search</p>
         </div>
     </a>
     <div class="dropdown-menu w-100 p-3" aria-labelledby="mobile-search">
@@ -11,7 +11,7 @@
                 <input type="text" class="form-control border border-black rounded-0" name="q" placeholder="Search Products">
                 <div class="input-group-append">
                         <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                            <span class="icon">
+                            <span class="icon logo-font">
                                 <i class="fas fa-search"> Search </i>
                              </span>
                        </button>
@@ -24,7 +24,7 @@
     <a href="#" class="navigation-link d-block d-lg-none" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div class="fas fa-user"></div>
-            <p class="my-0">Account</p>
+            <p class="my-0 logo-font">Account</p>
         </div>
     </a>
     <div class="dropdown-menu" aria-labelledby="user-options">
@@ -43,7 +43,7 @@
 <li class="list-inline-item d-md-none">
     <a href="{% url 'bag_view' %}" class="{% if grand_total %}font-weight0bold info{% else %}black-font{% endif %} navigation-link">
         <div class="text-center">
-            <div><i class="fas fa-shopping-bag"></i></div>
+            <div><i class="fas fa-shopping-bag logo-font"></i></div>
                 <p class="my-0">
                 {% if grand_total %}
                     £{{ grand_total|floatformat:2 }}
