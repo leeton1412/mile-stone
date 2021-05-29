@@ -173,7 +173,17 @@ The Fonts I used for this project are **New Tegomin** and **Serif** with the fon
 * **Product Model**
     * Products Desgined to store more information for further use
     * Categories to help sort the products.
-    * Order Model to help track orders. 
+    * Order Model to help track orders.
+
+
+### Features left to implement
+
+* **More Merchandise** - To enable potential customers to browse more gaming related products.
+* **Email Contact** - To enable an email function for customers to easily get in touch.
+* **Recipies** - To enable recipies for users who are subscribed to the site to gain accesss to recipies. This is stored in the product models.
+* **Tracking User Behaviour** - Use an analytics tool such as [Hotjar](https://www.hotjar.com/) to view user behaviour.
+* **Further Styling** - Site requires further styling to get desired feel.
+* **Search functionality** - Better use of Categories to provide better search options once products grow in number.  
 
 
 
