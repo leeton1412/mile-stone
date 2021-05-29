@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import dj_database_url
 from pathlib import Path
 if os.path.exists("env.py"):
     import env
@@ -123,10 +124,13 @@ WSGI_APPLICATION = 'brownies.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+       'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
+DATABASES = {
+    'default': dj_database_url.parse('postgres://kaiyqtqbmgkejs:bcf76abdf5d84029623305b91281a06d758bebadf3aa6918b5da30cb4f976501@ec2-52-19-170-215.eu-west-1.compute.amazonaws.com:5432/d656mgr6s3vm2q')
 }
 
 

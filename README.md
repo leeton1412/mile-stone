@@ -225,6 +225,32 @@ The Fonts I used for this project are **New Tegomin** and **Serif** with the fon
 * [jshint](https://jshint.com/) - used to validate my Javascript code.
 
 
+## Testing
+
+
+## Deployment
+
+This web app was developed in Gitpod and pushed to the remote repository, GitHub.
+
+**Used commands during deployment:**
+* `git add .` - to add the files to the staging area.
+* `git commit -m "text message here"` - to commit the files.
+* `git push` - to push to origin master branch on to GitHub.
+* `git status` - to see the current status of the files.
+
+### Hosting on Heroku
+
+* Log into Heroku.
+* Click Create new app.
+* Give it a name and select nearest region. Then click create app.
+* Then on resource tab create postgres database. Then select free plan.
+* Pip3 install dj-databse-url and psycopg2-binary to auto install apps on Heroku.
+* Go to settings.py and import dj-database-url then set default database to be the Heroku var.
+* Then run migrations with "python3 manage.py migrate".
+
+
+
+
 
 
 
