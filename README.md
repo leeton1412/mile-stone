@@ -183,7 +183,12 @@ The Fonts I used for this project are **New Tegomin** and **Serif** with the fon
 * **Recipies** - To enable recipies for users who are subscribed to the site to gain accesss to recipies. This is stored in the product models.
 * **Tracking User Behaviour** - Use an analytics tool such as [Hotjar](https://www.hotjar.com/) to view user behaviour.
 * **Further Styling** - Site requires further styling to get desired feel.
-* **Search functionality** - Better use of Categories to provide better search options once products grow in number.  
+* **Search functionality** - Better use of Categories to provide better search options once products grow in number.
+
+
+### Bugs and Fixes for Future Releases After Testing
+
+
 
 
 
