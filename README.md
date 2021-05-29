@@ -209,6 +209,22 @@ The Fonts I used for this project are **New Tegomin** and **Serif** with the fon
 * [Django-Crispy-Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - used to create a clean display for forms.
 * [Stripe](https://stripe.com/gb) - used to create a quick and easy checkout process.
 
+### Tools
+
+* [Gitpod](https://www.gitpod.io) - used as IDE for this project.
+* [Git](https://git-scm.com/) - used for version control.
+* [Github](https://github.com/) - used to host repository and live website.
+* [Balsamiq](https://balsamiq.com/) - used for creation of mockups.
+* [Am I Responsive](http://ami.responsivedesign.is/) - used for testing purposes as well as creating the image to display the web pages on different devices.
+* [Google Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools) - used for testing and debugging.
+* [w3 html validator](https://validator.w3.org/) - used to test and validate my html code.
+* [w3 css validator](https://jigsaw.w3.org/) - used to test and validate my css code.
+* [Free Formatter](https://www.freeformatter.com/) - used to format my html, css and javascript code.
+* [Browserstack](https://www.browserstack.com/) - used to test my site on different browsers.
+* [Color Scheme Designer](http://colorschemedesigner.com/) - used to test colour combinations.
+* [jshint](https://jshint.com/) - used to validate my Javascript code.
+
+
 
 
 
