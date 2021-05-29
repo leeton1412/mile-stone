@@ -5,19 +5,22 @@
 
 {% block content %}
 <div class="container-fluid h-200">
-    <div class="row h-100">
+    <div class="row">
         <div class="col-12 my-auto mt-5 pt-4">
-            <h1 class="display-5 logo-font text-center">CAKE-STATION</h1>
-        </div>
-        <div>
-    
-            <div class="col-12 mt-5">
-                <img src="/media/play.jpg" class="rounded float-middle offset-md-5 home-logo" alt="play_image">
-            </div>
+            <h1 class="display-5 logo-font text-center mt-5">CAKE-STATION</h1>
         </div>
     </div>
-    <h4 class="text-center mt-3">
-                <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
-            </h4>
+    <div class="row">
+        <div class="col-12 col-sm-6 mt-5 offset-md-3 text-center">
+            <img src="/media/play.jpg" class="mx-auto offset-md-3 d-block" alt="play_image">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+        <h4 class="text-center mt-3">
+                    <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+        </h4>
+        </div>
+    </div>
 </div>
 {% endblock %}
