@@ -189,6 +189,28 @@ The Fonts I used for this project are **New Tegomin** and **Serif** with the fon
 ### Bugs and Fixes for Future Releases After Testing
 
 
+## Technologies Used
+
+### Languages
+
+* HTML - base language for this project.
+* CSS - used for styling the HTML code.
+* JavaScript - used to make the web app interactive and activate certain functionality.
+* Python3 - Used to interact and use Django Frameworks.
+
+### Libraries
+
+* [Bootstrap](https://getbootstrap.com/) - used for responsive grid system, styling, modals and Toasts.
+* [JQuery](https://jquery.com/) & [Popper](https://popper.js.org/) - were used in conjunction with the Bootstrap library and Javascript.
+* [FontAwseome](https://fontawesome.com/) - used for all icons on the site.
+* [Google Fonts](https://fonts.google.com/) - used for the New Tegomin fonts.
+* [Unsplash](https://unsplash.com/) - used for all images.
+* [Bulma](https://bulma.io/) - used to help style content.
+* [Django-Crispy-Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - used to create a clean display for forms.
+* [Stripe](https://stripe.com/gb) - used to create a quick and easy checkout process.
+
+
+
 
 
 
