@@ -247,6 +247,9 @@ This web app was developed in Gitpod and pushed to the remote repository, GitHub
 * Pip3 install dj-databse-url and psycopg2-binary to auto install apps on Heroku.
 * Go to settings.py and import dj-database-url then set default database to be the Heroku var.
 * Then run migrations with "python3 manage.py migrate".
+* Set if statment in settings to use "DATABASE_URL".
+* Install gunicorn and freeze requirements
+* Create Procfile and create web Dyno
 
 
 
