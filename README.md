@@ -122,4 +122,59 @@ The Fonts I used for this project are **New Tegomin** and **Serif** with the fon
 ### Wireframes
 
 
+## Features
+
+### Existing Features
+
+* **Layout and Style**
+    * I wanted the web app to have an appearance that was associated with baking. Its designed with a darker tone to help appeal more to gamers at the same time. My aim was to provide users with quick access as the web app had loaded and eradicate anytime wasting, with the colour scheme and fonts used I believe I have been able to achieve this.
+    * All forms generated using Crispy Form.
+    * AllAuth used for quick and easy registration.
+    * Toasts used to deliver messages to the user.
+
+* **Navigation bar**
+    * This provides the user with quick access to their shopping bag, search function and product selection
+    * If a user is a super user they gain access to edit and delete items from the database to make the need for admin redundant.
+    * The search function will pick up any favourites a customer may have and provide easy purchases. 
+
+* **Footer**
+    * Codepen Footer From Sherif Hamdy
+    * Provides quick information about the company.
+    * Social buttons that can be linked to the accounts.
+    * Social media links - facebook, Twitter, Instagram.
+    * A contact information area. Which can be built into a quick contact point
+    * Access back to products page quickly.
+
+* **Checkout Powered By Stripe**
+    * A Checkout form which is easy to fill in and provides quick payment via Stripe.
+    * Information save options to save it for a logged in user.
+    * Toasts to display successfull purchases
+    * Success page to show the order being completed.
+    * Stripe elements used for easy styling 
+
+* **Profile**
+    * User profile that will display order history and delivery information.
+    * Update information button that will update the users information.
+
+* **Super User Access**
+    * As mentioned above extra buttons to provide CRUD functionality for superusers.
+    * Basic and easy to use buttons. 
+
+* **Product Display**
+    * Clicking on a product will load the product with more information
+    * Provides the ability to add the product to the shopping basket.
+    * Buttons to return to shopping or procceed to checkout. 
+
+* **Shopping Bag View** 
+    * Will allow users to update shopping bag.
+    * Will Show customers how many items they are about to purchase.
+    * Show Description of the product.
+
+* **Product Model**
+    * Products Desgined to store more information for further use
+    * Categories to help sort the products.
+    * Order Model to help track orders. 
+
+
+
 
