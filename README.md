@@ -55,3 +55,34 @@ The web app can be viewed on Desktop, Tablet and Mobile devices. Click [here]() 
     * [Acknowledgements](#acknowledgements)
         * [Pages used for information](#pages-used-for-information)
         * [I received advice and encouragement from](#i-received-advice-and-encouragement-from)
+
+## UX
+
+### Goals
+
+#### Cake-Station Goals
+
+The goal of this web app is to allow gamers to find their dream food. It aims for easy repeat use.
+
+**Target audience is:**
+
+* Gamers who are looking to plan a gaming night with friends.
+* Gamers who are looking to compete in long time-scale activities 
+* Gamers who are looking to compete competitivley 
+* Any Person who is into gaming
+* Any age group.
+ 
+
+#### Business goals
+
+* Create Repeat Business.
+* Easy to use.
+* Easy to purchase.
+
+
+#### Customer goals
+
+* Great food
+* Quality Prices
+
+Both business and customer goals are addressed through user stories.
