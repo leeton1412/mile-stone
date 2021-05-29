@@ -48,7 +48,7 @@
                                         </button>
                                     </div>
 
-                                        <input class="form-control form-control-sm qty_input " type="number" min="1" name="amount" max="99" value="{{ item.quantity }}" 
+                                        <input class="form-control form-control-sm qty_input updated-bag " type="number" min="1" name="amount" max="99" value="{{ item.quantity }}" 
                                             data-item_id="{{ item.item_id }}" 
                                             id="id_qty_{{ item.item_id }}" >
 
@@ -108,8 +108,8 @@
         // Remove  
         $('.remove-item').click(function(e) {
             var csrfToken = "{{ csrf_token }}";
-            var itemId = $(this).attr('id').split('remove_')[1];
-            var url = `/holding/remove/${itemId}/`;
+            var item_id = $(this).attr('id').split('remove_')[1];
+            var url = `/holding/remove/${item_id}/`;
             var data = {'csrfmiddlewaretoken': csrfToken}
 
             $.post(url, data)
