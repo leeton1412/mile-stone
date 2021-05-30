@@ -56,6 +56,7 @@
 * Bag
     * Text not displaying due to no background on text
     * Carriage charge not displaying on basket.
+    * Quantity bar higher than other elements creating responsive issues
 
     ![Text Problem](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/Text_not_showing_in_basket.png)<br>
 
@@ -69,9 +70,36 @@
 
 * Profile 
     * When logged in and on my profile you can update your details due to background unable to see what you are typing.
-    * Major error with information not being saved
+    * Major error with information not being saved.
 
-    ![Sign in](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/My_profile.png)
+    ![Sign in](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/My_Profile.png)
+
+* Checkout 
+    * Within the checkout window you are unable to see text due to colour.
+    * Within the country field you must input country code. Django countries import error 
+    * Above payment you are unable to see “Save This Information” – also a little confusing with the payment header and looks like where you should put card details.
+    * Payment needs zipcode
+
+    ![Checkout](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/Check_out_window.png)<br>
+
+
+    ![Checkout](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/PaymentOnCheckout.png) 
+
+* Order Confirmation
+    * Text not able to be displayed due to colour
+    * At the bottom of the confirmed checkout page shows billing information but no data below this.
+
+    ![Order](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/PaymentOnCheckout.png)<br>
+
+
+    ![Order](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/ConfirmedOrderPageMarginIssue.png)
+
+
+
+
+
+
+
 
 
 
