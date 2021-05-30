@@ -252,8 +252,11 @@ This web app was developed in Gitpod and pushed to the remote repository, GitHub
 * Create Procfile and create web Dyno
 * Disbale static for your app once logged into Heroku
 * Set allowed hosts in settings.py
-* Create Procfile and create web Dyno
-* Create Procfile and create web Dyno
+* Commit changes and push to github and then heroku
+* set heroku to be a repo with heroku git:remote -a cakestation
+* Generate a secret key and set in heroku
+* Set the secret key in settings.py to get it from the environment.
+* 
 
 
 
