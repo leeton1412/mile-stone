@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-12">
             {% if bag_items %}
                 <table class="logo-font-table">
                 <div class="table-responsive">
@@ -38,35 +38,36 @@
                         <td>
                             <form class="form updated-bag" action="{% url 'update_item' item.item_id %}" method="POST">
                                 {% csrf_token %}
-                           <div class="form-group ">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <button class="decrease-quantity btn btn-sm rounded-0" data-item_id="{{ item.item_id }}" id="decrease-qty_{{ item.item_id }}">
-                                            <span>
-                                                <i class="fas fa-minus fa-sm"></i>
-                                            </span>
-                                        </button>
-                                    </div>
-
-                                        <input class="form-control form-control-sm qty_input updated-bag " type="number" min="1" name="amount" max="99" value="{{ item.quantity }}" 
-                                            data-item_id="{{ item.item_id }}" 
-                                            id="id_qty_{{ item.item_id }}" >
+                                <div class="form-group ">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <button class="decrease-quantity btn btn-sm rounded-0"
+                                                data-item_id="{{ item.item_id }}" id="decrease-qty_{{ item.item_id }}">
+                                                <span>
+                                                    <i class="fas fa-minus fa-sm"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <input class="form-control form-control-sm qty_input updated-qty " type="number"
+                                            min="1" name="amount" max="99" value="{{ item.quantity }}"
+                                            data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
 
                                         <div class="input-group-append">
-                                            <button class="increase-quantity btn btn-sm rounded-0" data-item_id="{{ item.item_id }}" id="increase-qty_{{ item.item_id }}">
+                                            <button class="increase-quantity btn btn-sm rounded-0"
+                                                data-item_id="{{ item.item_id }}" id="increase-qty_{{ item.item_id }}">
                                                 <span>
                                                     <i class="fas fa-plus fa-sm"></i>
                                                 </span>
                                             </button>
                                         </div>
+                                    </div>
                                 </div>
-                            </div>
                             </form>
-                            <a class="update-item logo-font" href=""><small>update</small></a>
-                            <a class="remove-item logo-font float-right" id="remove_{{ item.item_id }}" href=""><small>remove</small></a>
+                            <a class="update-item logo-font"><small>update</small></a>
+                            <a class="remove-item logo-font float-right" id="remove_{{ item.item_id }}"><small>remove</small></a>
                         </td>
                         <td>
-                            <p class="logo-font text-center"><bold>{{ item.product.description }}</bold></p>
+                            <p class="logo-font text-left"><bold>{{ item.product.description }}</bold></p>
                         </td>
                     </tbody>
                     {% endfor %}
@@ -75,10 +76,10 @@
                         <h5 class="logo-font">Total: £{{ total|floatformat:2 }}</h5>
                         </th>
                         <td>
-                            <a href="{% url 'products' %}" class="shop-button btn btn-lg rounded-0 text-uppercase mt-5">Get Some Cake!</a>                            
+                            <a href="{% url 'products' %}" class="shop-button btn btn-sm rounded-0 text-uppercase mt-5">Get Some Cake!</a>                            
                         </td>
                         <td>
-                            <a href="{% url 'checkout' %}" class="shop-button btn btn-lg rounded-0 text-uppercase mt-5">Checkout</a>                            
+                            <a href="{% url 'checkout' %}" class="shop-button btn btn-sm rounded-0 text-uppercase mt-5">Checkout</a>                            
                         </td>
                      </tr>
                 </table>  
@@ -101,9 +102,9 @@
     <script type="text/javascript">
         // Quantity update 
         $('.update-item').click(function(e) {
-            var quantity = $(this).prev('.updated-bag');
+            var form = $(this).prev('.updated-bag');
             form.submit();
-        })
+        });
 
         // Remove  
         $('.remove-item').click(function(e) {
@@ -116,6 +117,6 @@
             .done(function(){
                 location.reload();
             });
-        })
+        });
     </script>
 {% endblock %}

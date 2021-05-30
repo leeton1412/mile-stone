@@ -29,16 +29,15 @@ def add_item(request, item_id):
 
 def update_item(request, item_id):
     """ View to update items in bag """
-    product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('amount'))
     bag = request.session.get('bag', {})
 
     if quantity > 0:
         bag[item_id] = quantity
-        messages.success(request, f'Amount of {product.name} updated to {bag[item_id]}')
+        messages.success(request, 'Item quantity updated')
     else:
         bag.pop[item_id]
-        messages.success(request, f'Amount of {product.name} updated to {bag[item_id]}')
+        messages.success(request, 'Item quantity updated')
 
     request.session['bag'] = bag
     return redirect(reverse('bag_view'))
@@ -46,17 +45,15 @@ def update_item(request, item_id):
 
 def remove_item(request, item_id):
     """ View to clear bag """
-    
     try:
-        product = Product.objects.get(pk=item_id)
         bag = request.session.get('bag', {})
         bag.pop[item_id]
-        messages.success(request, f'{product.name} removed')
+        messages.success(request, 'Product Removed')
 
         request.session['bag'] = bag
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, f'Error removing item: {e}')
+        messages.error(request, 'Could not remove item')
         return HttpResponse(status=500)
         
