@@ -256,7 +256,20 @@ This web app was developed in Gitpod and pushed to the remote repository, GitHub
 * set heroku to be a repo with heroku git:remote -a cakestation
 * Generate a secret key and set in heroku
 * Set the secret key in settings.py to get it from the environment.
+* Set up AWS account and use to host static.
+* Create a bucket and store static files in there
+* Enable Static Hosting.
+* Create a user group.
+* Create a policy.
+* Create A user
+* Download the cv3 file and save.
+* Back in gitpod install boto3 and django-storages
+* Add storages to installed apps.
+* In settings set the correct bucket you want to connect to.
+* Set your keys in heroku variables and set USE_AWS to true.
+* Disable the collect static var.
 * 
+
 
 
 
