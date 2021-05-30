@@ -13,7 +13,7 @@
 
         <div class="row col-md-11 offset-md-1 col-sm-3 p-4 logo-font">
             {% for product in products %}
-                <div class="card mx-auto bg-dark" style="width: 14rem;">
+                <div class="card mx-auto bg-light" style="width: 14rem;">
                     {% if product.image %}
                     <a href="{% url 'detail' product.id %}">
                         <img src="{{ product.image.url }}" class="card-img-top img-fluid" alt="{{ product.name }}">
@@ -25,10 +25,10 @@
                     {% endif %}
                     <div class="card-body">
                         <div class="row">
-                            <p class="card-text text-center bg-dark logo-font"><strong> {{ product.name }} </strong></p>
+                            <p class="card-text text-center bg-light logo-font"><strong> {{ product.name }} </strong></p>
                         </div>
                         <div class="row text-center">
-                            <p class="card-text logo-font logo-font">£{{ product.price }}</p>
+                            <p class="card-text logo-font">£{{ product.price }}</p>
                         </div>
                     </div>
                     {% if request.user.is_superuser %}
