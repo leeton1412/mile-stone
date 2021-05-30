@@ -49,7 +49,7 @@
             <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="bg-light">
                 {% csrf_token %}
                 <fieldset>
-                    <legend>Details</legend>
+                    <legend class="text-center logo-font">Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
@@ -97,13 +97,6 @@
         </div>
     </div>
 
-</div>
-<div id="loading-overlay">
-    <h1 class="text-light loading-spinner logo-font">
-        <span class="icon">
-            <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-        </span>
-    </h1>
 </div>
 {% endblock %}
 {% block postloadjs %}

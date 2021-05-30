@@ -19,6 +19,7 @@
     * I used Bootstrap to ensure I have reactive columns on different screen sizes. As before some issues have been identified for fixing.
 * Testing that the css is targeting the relevant html code.
     * As an outcome the webiste is responsive on all screen sizes.
+    * AllAuth Templates still need customizing 
 * Console Debugging
     * As an outcome I was able to see whether my Javascript functions were being called and were executing properly by displaying a console.log value in my console.
     * I noted that a Favicon was missing and was able to fix this by adding a favicon script and images. 
@@ -96,6 +97,13 @@
 
 
     ![Order](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/ConfirmedOrderPageBillingInformationNoData.png)
+
+* Mobile Home page
+    * After Static commit issues have shown up in regards to navbar not staying inline. This has caused issues and due to having to submit cannot be rectified.
+
+    ![Nav Issue](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/MobileViewHomepage.png)
+
+
 
 
 
