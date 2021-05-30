@@ -66,9 +66,8 @@
                         </div>
 
                         <div class="col-12">
-                            <a href="{% url 'products' %}" class="shop-button btn btn-sm rounded-0 text-uppercase mt-3 mb-3">Get Back To Shopping</a>
                             <input type="submit" class="shop-button btn btn-sm rounded-0 text-uppercase mt-3 mb-3" value="Add to Bag">
-                        </div>
+                            <a href="{% url 'products' %}" class="shop-button btn btn-sm rounded-0 text-uppercase mt-3 mb-3">Get Back To Shopping</a></div>
                         <div class="row">
                             <div class="col-12">
                                 {% if request.user.is_superuser %}

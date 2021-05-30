@@ -25,16 +25,16 @@
                     {% endif %}
                     <div class="card-body">
                         <div class="row">
-                            <p class="card-text text-center"><strong> {{ product.name }} </strong></p>
+                            <p class="card-text text-center bg-dark logo-font"><strong> {{ product.name }} </strong></p>
                         </div>
                         <div class="row text-center">
-                            <p class="card-text">£{{ product.price }}</p>
+                            <p class="card-text logo-font logo-font">£{{ product.price }}</p>
                         </div>
                     </div>
                     {% if request.user.is_superuser %}
                         <small>
                             <a href="{% url 'edit_product' product.id %}" class="logo-font">Edit </a>
-                            <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                            <a href="{% url 'delete_product' product.id %}" class="text-danger ml-1">Delete</a>
                         </small>
                     {% endif %}   
                 </div>

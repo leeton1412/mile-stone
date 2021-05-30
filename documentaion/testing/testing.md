@@ -39,8 +39,8 @@
 
 * Products
     * Images to show on to product page.
-    * Change colour of text to show better on ground.
-    * Change colour of text to show better on ground.
+    * Change colour of text to show better.
+    * Change colour of text to show better.
 
     ![Images](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/Products_with_images_missing.png)<br>
 
