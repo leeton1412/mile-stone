@@ -227,6 +227,7 @@ The Fonts I used for this project are **New Tegomin** and **Serif** with the fon
 
 ## Testing
 
+Testing information can be found [here](documentation/testing/testing.md)
 
 ## Deployment
 
@@ -268,7 +269,43 @@ This web app was developed in Gitpod and pushed to the remote repository, GitHub
 * In settings set the correct bucket you want to connect to.
 * Set your keys in heroku variables and set USE_AWS to true.
 * Disable the collect static var.
-* 
+* Git add and commit changes.
+* The app can now be launched through its heroku web address.
+
+
+### Media
+
+**All Images & Audio**
+   * All of the images used in the web app are free and do not require permission to use.
+
+
+
+### Acknowledgements
+
+#### Examples and Tutorials and Samples
+
+* [Code Institute](https://codeinstitute.net/) - I used Boutique Ado as a guide on how to complete this project.
+
+   
+
+#### Pages used for information
+
+* [W3schools](https://www.w3schools.com/)
+* [W3C](https://www.w3.org/)
+* [Stack overflow](https://stackoverflow.com/)
+* [CSS-Tricks](https://css-tricks.com/)
+* [MDN web docs](https://developer.mozilla.org/)
+* [Codepen](https://codepen.io/)
+
+#### I received advice and encouragement from
+   * Tutor Support (CI online webchat)
+   * Chantelle Turner (Partner)
+   * Ian Westwood (Work Colleague)
+   * Scott and Tim (Tutor Support)
+
+## Disclaimer
+
+**This web page was created for educational purposes only.** 
 
 
 
