@@ -36,7 +36,7 @@ def update_item(request, item_id):
         bag[item_id] = quantity
         messages.success(request, 'Item quantity updated')
     else:
-        bag.pop[item_id]
+        bag.pop(item_id)
         messages.success(request, 'Item quantity updated')
 
     request.session['bag'] = bag

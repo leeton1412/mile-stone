@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-9%3@x9cs%^!b-1xx^w=o&9n3l2ccvqec@0dfc04qeywq@#7efs
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cakestation.herokuapp.com', 'localhost']
 
 
 # Application definition

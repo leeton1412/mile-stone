@@ -250,6 +250,10 @@ This web app was developed in Gitpod and pushed to the remote repository, GitHub
 * Set if statment in settings to use "DATABASE_URL".
 * Install gunicorn and freeze requirements
 * Create Procfile and create web Dyno
+* Disbale static for your app once logged into Heroku
+* Set allowed hosts in settings.py
+* Create Procfile and create web Dyno
+* Create Procfile and create web Dyno
 
 
 
