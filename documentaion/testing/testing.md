@@ -101,7 +101,10 @@
 * Mobile Home page
     * After Static commit issues have shown up in regards to navbar not staying inline. This has caused issues and due to having to submit cannot be rectified.
 
-    ![Nav Issue](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/MobileViewHomepage.png)
+    ![Nav Issue](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/MobileViewHomepage.png)<br>
+
+
+    ![Nav Issue](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/MobileViewConfirmationError.png)
 
 
 
