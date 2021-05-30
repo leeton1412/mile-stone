@@ -23,3 +23,15 @@
     * As an outcome I was able to see whether my Javascript functions were being called and were executing properly by displaying a console.log value in my console.
     * I noted that a Favicon was missing and was able to fix this by adding a favicon script and images. 
     * I noted that there is an issue with checkout view, save_info not saving and preventing delivery information being save.
+
+
+## Manual Testing
+
+* Home Page
+   * Search icon lower than search bar.
+   * Banner not covering Full Screen.
+
+   ![Search bar](https://github.com/leeton1412/mile-stone/master/documentation/testing/images/Banner_image.png) 
+
+
+   
