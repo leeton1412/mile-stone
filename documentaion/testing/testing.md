@@ -31,7 +31,7 @@
    * Search icon lower than search bar.
    * Banner not covering Full Screen.
 
-   ![Search bar](https://github.com/leeton1412/mile-stone/master/documentation/testing/images/Banner_image.png) 
+   ![Search bar](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/Banner_image.png) 
 
 
    
