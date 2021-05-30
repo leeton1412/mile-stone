@@ -92,7 +92,10 @@
     ![Order](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/PaymentOnCheckout.png)<br>
 
 
-    ![Order](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/ConfirmedOrderPageMarginIssue.png)
+    ![Order](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/ConfirmedOrderPageMarginIssue.png)<br>
+
+
+    ![Order](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/ConfirmedOrderPageBillingInformationNoData.png)
 
 
 
