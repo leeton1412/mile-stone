@@ -36,7 +36,7 @@
                             <p class="logo-font"><bold>£{{ item.product.price }}</bold></p>
                         </td>
                         <td>
-                            <form class="form updated-bag" action="{% url 'update_item' item.item_id %}" method="POST">
+                            <form class="form updated-bag bg-light" action="{% url 'update_item' item.item_id %}" method="POST">
                                 {% csrf_token %}
                                 <div class="form-group ">
                                     <div class="input-group">

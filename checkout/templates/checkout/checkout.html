@@ -46,7 +46,7 @@
         </div>
     </div>
         <div class="col-md-12">
-            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form" class="bg-light">
                 {% csrf_token %}
                 <fieldset>
                     <legend>Details</legend>
@@ -84,7 +84,7 @@
                         </div>
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">  
                 </fieldset>
-                <div class="submit">
+                <div class="submit bg-light">
 
                     <button id="submit-button">
                         Complete order

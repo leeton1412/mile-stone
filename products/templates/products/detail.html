@@ -25,11 +25,11 @@
                     {% endif %}   
             </div>
         </div>
-        <div class="col-12 col-md-6 offset-md-1 col-lg-12">
+        <div class="col-12 col-md-6 offset-md-1 col-lg-12 bg-light">
             <div class="row"></div>
             <div class="details-container ">
                 <p class="product-text">£{{ product.price }}</p>
-                {% if prouct.is_vegan %}
+                {% if product.is_vegan %}
                     <p class="product-text"><i class="fas fa-seedling"></i> Vegan Friendly! <i class="fas fa-seedling"></i></p>
                 {% endif %}
                 <p class="product-text">Allergens: {{ product.allergens }}</p>
