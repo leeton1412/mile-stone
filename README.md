@@ -1,7 +1,7 @@
 # Cake-Station - A Shop To Purchase Brownies and Cakes 
 
 
-![Responsive Image]()
+![Responsive Image](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/screen1.png)
 
 ## Introduction
 
@@ -201,7 +201,7 @@ Wireframes can be found [here](documentation/wire-frames/wireframes.md)
 * **Email widget**
     * Email widget currently has been deactivated due to a bug. Due to time restrictions this has not been fixed but left in to help flow of website
 
-    
+
 ## Technologies Used
 
 ### Languages
