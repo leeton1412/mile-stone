@@ -189,7 +189,19 @@ Wireframes can be found [here](documentation/wire-frames/wireframes.md)
 
 ### Bugs and Fixes for Future Releases After Testing
 
+* **Nav bar mobile and bag on Mobile**
+    * 2 main issues have arose after static files implemented. Nav Bar on mobile is no longer clean and responsive. Bag is no longer responsive. Due to time restrictions i will not be able to fix this
 
+* **JavaScript**
+    * Issue with Remove function on bag view. This can still be achieved via update bag. Due to time restrictions this has not been fixed.
+
+* **Update information**
+    * Update information is currently not updating. Due to time restrictions this has not been fixed
+
+* **Email widget**
+    * Email widget currently has been deactivated due to a bug. Due to time restrictions this has not been fixed but left in to help flow of website
+
+    
 ## Technologies Used
 
 ### Languages
