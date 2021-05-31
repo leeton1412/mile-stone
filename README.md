@@ -121,6 +121,7 @@ The Fonts I used for this project are **New Tegomin** and **Serif** with the fon
 
 ### Wireframes
 
+Wireframes can be found [here](documentation/wire-frames/wireframes.md)
 
 ## Features
 

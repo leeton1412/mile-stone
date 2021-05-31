@@ -58,6 +58,7 @@
     * Text not displaying due to no background on text
     * Carriage charge not displaying on basket.
     * Quantity bar higher than other elements creating responsive issues
+    * Table no longer fits after static submit mobile view
 
     ![Text Problem](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/Text_not_showing_in_basket.png)<br>
 
@@ -72,6 +73,7 @@
 * Profile 
     * When logged in and on my profile you can update your details due to background unable to see what you are typing.
     * Major error with information not being saved.
+    * Remove button not functioning 
 
     ![Sign in](https://github.com/leeton1412/mile-stone/blob/master/documentaion/testing/images/My_Profile.png)
 
